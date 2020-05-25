@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+     default-init-method="init" default-destroy-method="destroy">
+
+    <bean id="test1" class="com.spring.controller.Test1" abstract="false">
+        <property name="message" value="This is a message!"/>
+        <property name="msg1" value="This is a msg1!"/>
+    </bean>
+
+    <bean id="test2" class="com.spring.controller.Test2" parent="test1">
+        <property name="message" value="This is a message for t2!"/>
+        <property name="msg2" value="This is a msg2 for t2!"/>
+    </bean>
+
+
+<!--    <bean class="com.spring.controller.InitTest"/>-->
+
+</beans>
